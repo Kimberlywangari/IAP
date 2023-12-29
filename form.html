@@ -1,0 +1,97 @@
+<!-- NJOROGE KIMBERLY SCT211-0060/2022 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Wangari Maathai</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+    
+
+    header {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    nav {
+      background-color: rgb(33, 29, 29);
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: rgb(42, 42, 170);
+    }
+ </style>
+ <script>
+    function showInfo() {
+      document.getElementById("info").style.display = "block";
+    }
+ </script>
+</head>
+<body>
+
+<header>
+ <h1>Wangari Maathai</h1>
+</header>
+
+<nav>
+ <a href="index.html">Index</a>
+ <a href="references.html">References</a>
+ <a href="form.html">Form</a>
+</nav>
+
+<div style="padding: 20px; margin-top: 20px;">
+ <h2>Form</h2>
+ <h3>Quiz:What is Wangari Maathai's birth place and year of birth:</h3>
+ <form onsubmit="event.preventDefault(); showInfo();">
+<label for="place">Place:</label><br>
+<input type="text" id="place" name="place"><br>
+<label for="year">Year:</label><br>
+<input type="text" id="year" name="year"><br>
+<input type="submit" value="Submit" id="clicky">
+ </form>
+
+ <div id="info" style="display: none;">
+   <h2>your answer:</h2>
+   <p>place: <span id="displayPlace"></span></p>
+   <p>Year: <span id="displayYear"></span></p>
+ </div>
+</div>
+
+<footer>
+ <p>Last updated: December 10, 2023</p>
+</footer>
+
+
+<script>
+    document.getElementById("clicky").onclick = function(){
+         var theplace = document.getElementById("place").value;
+        document.getElementById("displayPlace").innerText = theplace;
+
+        var theyear = document.getElementById("year").value;
+        document.getElementById("displayYear").innerText = theyear;
+    }
+</script>
+
+</body>
+</html>
